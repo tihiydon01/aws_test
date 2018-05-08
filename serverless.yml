@@ -1,0 +1,23 @@
+# serverless.yml
+
+service: my-test-client
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  region: us-east-1
+
+functions:
+  app:
+    handler: index.handler
+    cors: true
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+      - https: ANY /
+      - https: 'ANY {proxy+}'
+        
+
+plugins:
+  - serverless-offline 
