@@ -1,6 +1,6 @@
 # serverless.yml
 
-service: my-test-client
+service: my-apigee-client
 
 provider:
   name: aws

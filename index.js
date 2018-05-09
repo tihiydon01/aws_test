@@ -4,6 +4,6 @@ const app = express();
 module.exports.handler = serverless(app);
 
 app.get('/', function (req, res) {
-  res.send("Hello");
+  res.send("Hello, sls!");
 });
  
